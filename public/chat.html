@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Chat (Columna 1, ocupa toda la columna) -->
+        <div class="chat-container">
+            <div class="chat-box" id="message-box">CHAT</div>
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="ESCRIBE UN MENSAJE">
+                <button id="enviar_message">ENVIAR</button>
+            </div>
+        </div>
+
+        <!-- Formulario (Columna 2, Fila 1) -->
+        <div class="form-container">
+            <h2>Paquete</h2>
+            <div><button id="logout-btn">Log Out</button></div>
+            
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name">
+            </div>
+            <div class="form-group">
+                <label for="location">Ubicación</label>
+                <input type="text" id="location">
+            </div>
+            <div class="form-group">
+                <label for="price">Precio</label>
+                <input type="number" id="price">
+            </div>
+            <button id= "order-boton"class="order-button">ORDENAR</button>
+        </div>
+
+        <!-- Lista de Paquetes (Columna 2, Fila 2) -->
+        <div id = "contenedor_paquetes"class="package-container">
+            
+            
+            
+               
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js" type="module"></script>
+</body>
+
+</html>

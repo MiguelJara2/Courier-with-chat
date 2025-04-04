@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor Principal */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    grid-template-rows: auto 1fr;  /* El chat ocupa toda la columna izquierda */
+    gap: 10px;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Chat ocupa toda la columna izquierda */
+.chat-container {
+    grid-row: 1 / 3; /* Ocupa ambas filas */
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    height: 100%;
+}
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.chat-input {
+    border-top: 1px solid black;
+    padding: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+/* Sección de formulario */
+.form-container {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.form-container h2 {
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+/* Botón ORDENAR */
+.order-button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.order-button:hover {
+    background: #ddd;
+}
+
+/* Sección de Paquetes */
+.package-container {
+    display: flex;
+    flex-direction: column; /* Para que los paquetes se apilen verticalmente */
+    align-items: flex-start; /* Alinea los paquetes a la izquierda */
+    gap: 15px; /* Espaciado entre paquetes */
+}
+
+.package-container button {
+    padding: 5px 15px;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+    flex-direction: column;
+}
+.package-item {
+    display: flex;
+    align-items: center; /* Alinea texto y botón al centro */
+    justify-content: space-between; /* Espacia el texto y el botón */
+    width: 100%; /* Ocupará todo el ancho disponible */
+    max-width: 300px; /* Opcional: para evitar que sea demasiado ancho */
+    border: 1px solid black; /* Opcional: solo para visualización */
+    padding: 5px;
+}
